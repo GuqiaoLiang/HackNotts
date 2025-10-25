@@ -141,7 +141,7 @@ script = ExtResource("1_nbawx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["NPC"]]
 position = Vector2(166, 95)
 sprite_frames = SubResource("SpriteFrames_gapl3")
 animation = &"react"

@@ -1,35 +1,42 @@
 extends CharacterBody2D
 
-const SPEED = 80.0
+const SPEED = 40.0
 @onready var anim = $AnimatedSprite2D
+@onready var interaction_area = $InteractionArea
 
-var state := "idle"  # "idle", "run", "react"
+var state := "idle"  # "idle", "walk", "react"
+var player_nearby := false
+
+func _ready():
+	interaction_area.body_entered.connect(_on_body_entered)
+	interaction_area.body_exited.connect(_on_body_exited)
+	anim.play("idle")
 
 func _physics_process(delta: float) -> void:
-	var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	match state:
+		"idle":
+			anim.play("idle")
+		"walk":
+			anim.play("walk")
+		"react":
+			velocity = Vector2.ZERO
+			move_and_slide()
+			if not anim.is_playing():
+				state = "idle"
+			return
 
-	# --- React lock ---
-	if state == "react":
-		velocity = Vector2.ZERO
-		move_and_slide()
-		if not anim.is_playing():
-			state = "idle"
-		return
-
-	# --- Movement ---
-	velocity = input_vector * SPEED
 	move_and_slide()
 
-	# --- Flip for left/right movement ---
-	if input_vector.x != 0:
-		anim.flip_h = input_vector.x < 0
+func _on_body_entered(body):
+	if body.is_in_group("player"):
+		player_nearby = true
+		react_to_player()
 
-	# --- Animation logic ---
-	if input_vector == Vector2.ZERO:
-		if state != "idle":
-			state = "idle"
-			anim.play("idle")
-	else:
-		if state != "walk":
-			state = "walk"
-			anim.play("walk")
+func _on_body_exited(body):
+	if body.is_in_group("player"):
+		player_nearby = false
+
+func react_to_player():
+	if state != "react":
+		state = "react"
+		anim.play("react")
