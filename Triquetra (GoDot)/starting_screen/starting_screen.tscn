@@ -56,3 +56,5 @@ grow_vertical = 2
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_i7jur")
 metadata/_edit_use_anchors_ = true
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]

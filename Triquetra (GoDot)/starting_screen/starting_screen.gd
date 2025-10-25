@@ -2,8 +2,16 @@ extends Node2D
 
 @onready var bg: TextureRect = $TextureRect
 @onready var progress_bar: ProgressBar = $ProgressBar
+@onready var bgm = $bgm
 
+@export var bgm_path := "res://Songs/medieval.mp3"
 func _ready() -> void:
+	var stream = load(bgm_path)
+	if stream:
+		bgm.stream = stream
+		bgm.volume_db = -6
+		bgm.autoplay = true
+		bgm.play()
 	# 背景铺满屏幕
 	var screen_size = get_viewport().get_visible_rect().size
 	bg.size = screen_size

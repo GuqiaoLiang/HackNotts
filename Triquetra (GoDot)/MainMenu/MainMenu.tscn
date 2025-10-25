@@ -16,7 +16,7 @@ offset_right = 180.0
 offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(3.730133e-07, 0.2639653, 0.26399317, 1)
+color = Color(1.7447397e-07, 0.14379993, 0.2115266, 1)
 
 [node name="bg_image" type="TextureRect" parent="."]
 anchors_preset = 15
