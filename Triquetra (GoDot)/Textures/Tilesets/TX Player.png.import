@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oatjxktuu1hj"
-path="res://.godot/imported/Push Animation 48x48.png-5261713f68f6e0c39105227d5d121282.ctex"
+uid="uid://drv3in6r6xfyp"
+path="res://.godot/imported/TX Player.png-eebe5b6b788a7c1b319d2b4640cf8ccd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Push Animation 48x48.png"
-dest_files=["res://.godot/imported/Push Animation 48x48.png-5261713f68f6e0c39105227d5d121282.ctex"]
+source_file="res://Textures/Tilesets/TX Player.png"
+dest_files=["res://.godot/imported/TX Player.png-eebe5b6b788a7c1b319d2b4640cf8ccd.ctex"]
 
 [params]
 

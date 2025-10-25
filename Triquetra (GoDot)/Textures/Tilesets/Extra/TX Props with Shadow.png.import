@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oatjxktuu1hj"
-path="res://.godot/imported/Push Animation 48x48.png-5261713f68f6e0c39105227d5d121282.ctex"
+uid="uid://c2vflfufio082"
+path="res://.godot/imported/TX Props with Shadow.png-43a16aac3d1e5e139e87f9b4090f00dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Push Animation 48x48.png"
-dest_files=["res://.godot/imported/Push Animation 48x48.png-5261713f68f6e0c39105227d5d121282.ctex"]
+source_file="res://Textures/Tilesets/Extra/TX Props with Shadow.png"
+dest_files=["res://.godot/imported/TX Props with Shadow.png-43a16aac3d1e5e139e87f9b4090f00dd.ctex"]
 
 [params]
 
