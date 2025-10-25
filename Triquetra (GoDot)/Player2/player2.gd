@@ -1,45 +1,47 @@
 extends CharacterBody2D
 
 const SPEED = 100.0
-const GRAVITY = 600.0
-
 @onready var anim = $AnimatedSprite2D
 
-var direction := "front"  # can be "front", "back", "left", "right"
-var state := "idle"       # can be "idle", "walk", "slash"
+var direction := "front"
+var state := "idle"
 
 func _physics_process(delta: float) -> void:
 	var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	
-	if Input.is_anything_pressed():
-		print("Pressed something!")
 
-	# Apply gravity (if you have jumping)
-	if not is_on_floor():
-		velocity.y += GRAVITY * delta
+	# --- Slash override ---
+	if state == "slash":
+		# Stop all movement while slashing
+		velocity = Vector2.ZERO
+		move_and_slide()
+
+		# Wait for slash animation to finish
+		if not anim.is_playing():
+			state = "idle"
+		return  # skip rest of code while slashing
+
+	# --- Movement ---
+	velocity = input_vector * SPEED
+	move_and_slide()
 
 	# --- Direction detection ---
 	if input_vector.length() > 0:
-		# Detect dominant direction
 		if abs(input_vector.x) > abs(input_vector.y):
 			direction = "right" if input_vector.x > 0 else "left"
 		else:
 			direction = "back" if input_vector.y < 0 else "front"
 
-	# --- Action input ---
+	# --- Slash action ---
 	if Input.is_action_just_pressed("slash"):
 		state = "slash"
+		velocity = Vector2.ZERO   # stop moving instantly
 		anim.play("slash_" + direction)
-	elif input_vector == Vector2.ZERO:
+		return  # stop here this frame
+
+	# --- Animation logic ---
+	if input_vector == Vector2.ZERO:
 		state = "idle"
 		anim.play("idle_" + direction)
 	else:
 		state = "walk"
 		anim.play("walk_" + direction)
-
-	# --- Movement ---
-	velocity.x = input_vector.x * SPEED
-	velocity.y = input_vector.y * SPEED
-	print(input_vector)
-
-	move_and_slide()
