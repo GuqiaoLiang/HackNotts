@@ -118,7 +118,7 @@ animations = [{
 [node name="Ghost" type="CharacterBody2D"]
 script = ExtResource("1_rhyd0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["NPC"]]
 position = Vector2(156.5, 95.5)
 scale = Vector2(1.09375, 1.15625)
 sprite_frames = SubResource("SpriteFrames_gq6xt")

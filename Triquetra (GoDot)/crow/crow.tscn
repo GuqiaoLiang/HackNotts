@@ -1,0 +1,154 @@
+[gd_scene load_steps=21 format=3 uid="uid://bvgwi7r2hn445"]
+
+[ext_resource type="Script" uid="uid://b2b0o3yp1napd" path="res://crow/crow.gd" id="1_nbawx"]
+[ext_resource type="Texture2D" uid="uid://xq8cikrleo" path="res://art/Crow.png" id="1_rowo5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbawx"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chsdj"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_070wk"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1jrl"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(144, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63j38"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsni3"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhjwl"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm1ce"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(144, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdu1p"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0w8i"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_336ag"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nidue"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m32h"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnytg"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f86ru"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts4qy"]
+atlas = ExtResource("1_rowo5")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gapl3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbawx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chsdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_070wk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1jrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63j38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsni3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhjwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm1ce")
+}],
+"loop": false,
+"name": &"fly",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdu1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0w8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_336ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nidue")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m32h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnytg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f86ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ts4qy")
+}],
+"loop": false,
+"name": &"react",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbawx"]
+size = Vector2(26, 28)
+
+[node name="crow" type="CharacterBody2D"]
+script = ExtResource("1_nbawx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["NPC"]]
+position = Vector2(166, 95)
+sprite_frames = SubResource("SpriteFrames_gapl3")
+animation = &"react"
+
+[node name="InteractionArea" type="Area2D" parent="."]
+position = Vector2(166, 95)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_nbawx")
