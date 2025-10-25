@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://do0sjlmh24ve1"]
+[gd_scene load_steps=4 format=4 uid="uid://do0sjlmh24ve1"]
 
 [ext_resource type="TileSet" uid="uid://4sb04ju368vy" path="res://Textures/Mapped.tres" id="1_y0ncb"]
 [ext_resource type="PackedScene" uid="uid://bwokn1lb5fmn4" path="res://Player/player.tscn" id="2_i63mn"]
+[ext_resource type="PackedScene" uid="uid://dmik5qrfje173" path="res://Ghost/ghost.tscn" id="3_vnunq"]
 
 [node name="world" type="Node2D"]
 metadata/_edit_vertical_guides_ = [-253.0]
@@ -35,3 +36,6 @@ limit_left = -9999899
 limit_top = -137
 limit_right = 10000101
 limit_bottom = 26
+
+[node name="Ghost" parent="." instance=ExtResource("3_vnunq")]
+position = Vector2(182, -265)
