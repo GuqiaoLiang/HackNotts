@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://xb4qnfig5724"]
+[gd_scene load_steps=4 format=3 uid="uid://xb4qnfig5724"]
 
 [ext_resource type="Script" uid="uid://s16undvjm7ux" path="res://MainMenu/main_menu.gd" id="1_otibh"]
 [ext_resource type="Texture2D" uid="uid://d38iiwp1kbm14" path="res://Textures/Tilesets/Extra/TX Plant with Shadow.png" id="2_cruaa"]
+[ext_resource type="PackedScene" uid="uid://dmik5qrfje173" path="res://Ghost/ghost.tscn" id="3_b76km"]
 
 [node name="MainMenu" type="Node2D"]
 scale = Vector2(1.9, 0.99)
@@ -56,4 +57,5 @@ icon_alignment = 1
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 
-[node name="anim" type="AnimationPlayer" parent="."]
+[node name="Ghost" parent="." instance=ExtResource("3_b76km")]
+position = Vector2(-130, 60)
