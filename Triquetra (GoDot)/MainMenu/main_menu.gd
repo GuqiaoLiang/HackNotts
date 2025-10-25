@@ -20,17 +20,13 @@ func _ready():
 	btn_play.connect("pressed", Callable(self, "_on_play_pressed"))
 	btn_quit.connect("pressed", Callable(self, "_on_quit_pressed"))
 
-	# 播放入场动画（可选）
-	if anim.has_animation("intro"):
-		anim.play("intro")
+	## 播放入场动画（可选）
+	#if anim.has_animation("intro"):
+		#anim.play("intro")
 
 func _on_play_pressed():
 	# 播放点击动画
-	if anim.has_animation("fade_out"):
-		anim.play("fade_out")
-		anim.connect("animation_finished", Callable(self, "_on_anim_finished"))
-	else:
-		_start_game()
+	_start_game()
 
 func _on_quit_pressed():
 	get_tree().quit()
