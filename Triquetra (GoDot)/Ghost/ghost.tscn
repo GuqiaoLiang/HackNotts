@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dmik5qrfje173"]
+[gd_scene load_steps=38 format=3 uid="uid://pbr3abg3dmlj"]
 
 [ext_resource type="Script" uid="uid://cnjkh06hw6ljm" path="res://Ghost/ghost.gd" id="1_rhyd0"]
 [ext_resource type="Texture2D" uid="uid://d0gpcnhsrmel4" path="res://art/satiro-Sheet v1.1.png" id="1_sdx2j"]
