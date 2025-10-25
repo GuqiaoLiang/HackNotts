@@ -3,7 +3,8 @@
 [ext_resource type="TileSet" uid="uid://4sb04ju368vy" path="res://Textures/Mapped.tres" id="1_y0ncb"]
 [ext_resource type="PackedScene" uid="uid://bwokn1lb5fmn4" path="res://Player/player.tscn" id="2_i63mn"]
 
-[node name="Example" type="Node2D"]
+[node name="world" type="Node2D"]
+y_sort_enabled = true
 metadata/_edit_vertical_guides_ = [-253.0]
 
 [node name="Modern" type="Node2D" parent="."]
