@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Triquetra"
-run/main_scene="uid://whd04e7aybf"
+run/main_scene="uid://do0sjlmh24ve1"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

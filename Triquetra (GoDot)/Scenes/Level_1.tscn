@@ -25,7 +25,7 @@ tile_map_data = PackedByteArray("AAAIAPn/BwALAAgAAAAIAPb/BwANAAAAAAAKAPf/BwAHAAA
 tile_set = ExtResource("1_y0ncb")
 rendering_quadrant_size = 32
 
-[node name="Player" parent="." instance=ExtResource("2_i63mn")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_i63mn")]
 position = Vector2(43, -103)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -38,4 +38,4 @@ limit_right = 10000101
 limit_bottom = 26
 
 [node name="Ghost" parent="." instance=ExtResource("3_vnunq")]
-position = Vector2(182, -265)
+position = Vector2(112, -311)
