@@ -118,9 +118,9 @@ animations = [{
 script = ExtResource("1_rhyd0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(158, 93)
+position = Vector2(156.5, 95.5)
+scale = Vector2(1.09375, 1.15625)
 sprite_frames = SubResource("SpriteFrames_gq6xt")
-animation = &"run"
-frame_progress = 0.81688267
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
