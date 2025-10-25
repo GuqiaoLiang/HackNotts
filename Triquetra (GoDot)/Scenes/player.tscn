@@ -342,6 +342,6 @@ script = ExtResource("1_x3wgy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(63, 59)
+position = Vector2(166, 86)
 sprite_frames = SubResource("SpriteFrames_ie7r7")
 animation = &"jump"
