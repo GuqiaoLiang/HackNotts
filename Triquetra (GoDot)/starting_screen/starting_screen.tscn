@@ -1,60 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://whd04e7aybf"]
+[gd_scene load_steps=3 format=3 uid="uid://whd04e7aybf"]
 
 [ext_resource type="Script" uid="uid://c16b0t6yn31o6" path="res://starting_screen/starting_screen.gd" id="1_h5jmx"]
-[ext_resource type="Texture2D" uid="uid://sbv61q4kvkac" path="res://Textures/Background/background.jpg" id="2_7rhpn"]
 [ext_resource type="Texture2D" uid="uid://c544p1lhkfmg0" path="res://Textures/Logo/logo.svg" id="2_i7jur"]
 
 [node name="starting_screen" type="Node2D"]
 script = ExtResource("1_h5jmx")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_top = 2.0
-offset_right = 1200.0
-offset_bottom = 525.0
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_7rhpn")
-
-[node name="Title" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.2125
-anchor_top = 0.39674953
-anchor_right = 0.2125
-anchor_bottom = 0.39674953
-offset_left = 142.0
-offset_top = 100.0
-offset_right = 215.0
-offset_bottom = 123.0
-text = "Triquetra"
-metadata/_edit_use_anchors_ = true
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-anchors_preset = -1
-anchor_left = 0.23125
-anchor_top = 2.5717018
-anchor_right = 0.23125
-anchor_bottom = 2.5717018
-offset_left = 120.0
-offset_top = 150.0
-offset_right = 320.0
-offset_bottom = 177.0
-scale = Vector2(0.5, 0.5)
-metadata/_edit_use_anchors_ = true
-
 [node name="Logo" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(10, 100)
 anchors_preset = -1
-anchor_left = -0.020833334
-anchor_top = -0.009560215
-anchor_right = 0.47916666
-anchor_bottom = 0.49043977
-offset_left = 100.0
-offset_top = 30.0
-offset_right = 433.0
-offset_bottom = 330.0
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 90.0
+offset_top = 233.0
+offset_right = 423.0
+offset_bottom = 533.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_i7jur")
 metadata/_edit_use_anchors_ = true
 
-[node name="bgm" type="AudioStreamPlayer" parent="."]
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="."]
+offset_left = 99.0
+offset_top = 339.0
+offset_right = 172.0
+offset_bottom = 362.0
+text = "Triquetra"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
