@@ -318,7 +318,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2mqua")
 }],
-"loop": true,
+"loop": false,
 "name": &"slash_back",
 "speed": 5.0
 }, {
@@ -341,9 +341,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e4b0s")
 }],
-"loop": true,
+"loop": false,
 "name": &"slash_front",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -364,7 +364,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_23w32")
 }],
-"loop": true,
+"loop": false,
 "name": &"slash_left",
 "speed": 5.0
 }, {
@@ -387,7 +387,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nngpq")
 }],
-"loop": true,
+"loop": false,
 "name": &"slash_right",
 "speed": 5.0
 }, {
@@ -466,6 +466,6 @@ script = ExtResource("1_ry4yc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(149, 81)
+position = Vector2(155, 92)
 sprite_frames = SubResource("SpriteFrames_hikxi")
-animation = &"idle_back"
+animation = &"slash_front"
