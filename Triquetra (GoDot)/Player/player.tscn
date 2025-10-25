@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://oatjxktuu1hj" path="res://art/Push Animation 48x48.png" id="5_00tjw"]
 [ext_resource type="Texture2D" uid="uid://c28tqhdr4r8tx" path="res://art/Run Animation 48x48.png" id="6_nvl01"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhl08"]
+size = Vector2(40, 30)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
 atlas = ExtResource("2_fhl08")
 region = Rect2(0, 0, 48, 48)
@@ -336,28 +339,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fhl08"]
-radius = 11.0
-
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_4ntmi")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
-sprite_frames = SubResource("SpriteFrames_ie7r7")
-animation = &"jump"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -1)
-shape = SubResource("CircleShape2D_fhl08")
-
 [node name="InteractionArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(162, 101)
+shape = SubResource("RectangleShape2D_fhl08")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -3)
+sprite_frames = SubResource("SpriteFrames_ie7r7")
+animation = &"jump"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3, -2)
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
+position = Vector2(-10, -1)
