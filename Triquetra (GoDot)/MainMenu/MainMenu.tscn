@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d38iiwp1kbm14" path="res://Textures/Tilesets/Extra/TX Plant with Shadow.png" id="2_cruaa"]
 
 [node name="MainMenu" type="Node2D"]
-scale = Vector2(1.9199998, 1)
+scale = Vector2(1.9, 0.99)
 script = ExtResource("1_otibh")
 
 [node name="bg_color" type="ColorRect" parent="."]
@@ -12,31 +12,31 @@ custom_minimum_size = Vector2(100, 100)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 100.0
-offset_bottom = 100.0
+offset_right = 180.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(61686.33, 15.507363)
 color = Color(3.730133e-07, 0.2639653, 0.26399317, 1)
 
 [node name="bg_image" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 13.020836
-offset_top = 108.0
-offset_right = 525.0208
-offset_bottom = 620.0
+offset_left = 5.729168
+offset_top = 1.0000076
+offset_right = 517.7292
+offset_bottom = 513.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2.2932372, 1.9859091)
+scale = Vector2(0.4, 0.347)
 texture = ExtResource("2_cruaa")
 
 [node name="menu_box" type="VBoxContainer" parent="."]
-offset_left = 400.0
-offset_top = 800.0
-offset_right = 700.0
-offset_bottom = 1000.0
+offset_left = 59.895836
+offset_top = 103.0
+offset_right = 155.89584
+offset_bottom = 203.0
+scale = Vector2(0.5, 0.5)
 
 [node name="logo" type="TextureRect" parent="menu_box"]
 layout_mode = 2
