@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oatjxktuu1hj"
-path="res://.godot/imported/Push Animation 48x48.png-5261713f68f6e0c39105227d5d121282.ctex"
+uid="uid://egg0m2wbr8g4"
+path="res://.godot/imported/Scene Overview.png-629e3fdc1de67ae63db395497c5aaed1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Push Animation 48x48.png"
-dest_files=["res://.godot/imported/Push Animation 48x48.png-5261713f68f6e0c39105227d5d121282.ctex"]
+source_file="res://Textures/Tilesets/Scene Overview.png"
+dest_files=["res://.godot/imported/Scene Overview.png-629e3fdc1de67ae63db395497c5aaed1.ctex"]
 
 [params]
 
