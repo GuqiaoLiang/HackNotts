@@ -3,10 +3,15 @@
 [ext_resource type="TileSet" uid="uid://4sb04ju368vy" path="res://Textures/Mapped.tres" id="1_y0ncb"]
 
 [node name="Example" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-253.0]
 
 [node name="ghost" type="AnimatedSprite2D" parent="."]
 
 [node name="Modern" type="Node2D" parent="."]
+
+[node name="Ground" type="TileMapLayer" parent="Modern"]
+tile_set = ExtResource("1_y0ncb")
+rendering_quadrant_size = 32
 
 [node name="Medival" type="Node2D" parent="."]
 
