@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g7p8whvioqv1"
-path="res://.godot/imported/TX Props.png-9660789541b51a705ba7f62fb453a33f.ctex"
+uid="uid://blptaee1k1gr6"
+path="res://.godot/imported/TX Props.png-f9211c7a6fe63fc098428063a0581093.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Tilesets/TX Props.png"
-dest_files=["res://.godot/imported/TX Props.png-9660789541b51a705ba7f62fb453a33f.ctex"]
+source_file="res://Textures/Tilesets/Modern/TX Props.png"
+dest_files=["res://.godot/imported/TX Props.png-f9211c7a6fe63fc098428063a0581093.ctex"]
 
 [params]
 
