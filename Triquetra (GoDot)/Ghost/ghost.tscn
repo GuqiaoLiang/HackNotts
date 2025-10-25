@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dmik5qrfje173"]
+[gd_scene load_steps=19 format=3 uid="uid://dmik5qrfje173"]
 
 [ext_resource type="Script" uid="uid://cnjkh06hw6ljm" path="res://Ghost/ghost.gd" id="1_rhyd0"]
 [ext_resource type="Texture2D" uid="uid://d0gpcnhsrmel4" path="res://art/satiro-Sheet v1.1.png" id="1_sdx2j"]
+[ext_resource type="Texture2D" uid="uid://chnjtoctd1vs" path="res://Textures/Logo/bubble.png" id="3_rhyd0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uexgx"]
 atlas = ExtResource("1_sdx2j")
@@ -124,3 +125,13 @@ sprite_frames = SubResource("SpriteFrames_gq6xt")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Bubble" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_rhyd0")
+
+[node name="Label" type="Label" parent="Bubble"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
