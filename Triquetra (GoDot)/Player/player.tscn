@@ -340,6 +340,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_4ntmi")
 
 [node name="InteractionArea" type="Area2D" parent="."]
