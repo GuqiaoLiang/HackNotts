@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/d/GitHub/HackNotts/**)",
+      "Bash(tree -a -I '.git')",
+      "Bash(find . -type f ( -name \"*ghost*\" -o -name \"*halloween*\" -o -name \"*spooky*\" -o -name \"*pumpkin*\" -o -name \"*witch*\" ) -i)",
+      "Bash(head -5 {})"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
