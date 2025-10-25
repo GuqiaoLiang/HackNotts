@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bwokn1lb5fmn4"]
+[gd_scene load_steps=52 format=3 uid="uid://bwokn1lb5fmn4"]
 
 [ext_resource type="Script" uid="uid://biwj88qed26ts" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://b5dbiep8r333k" path="res://art/Idel Animation 48x48.png" id="2_fhl08"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dnu6owhhp5172" path="res://art/Pull Animation 48x48.png" id="4_od3ui"]
 [ext_resource type="Texture2D" uid="uid://oatjxktuu1hj" path="res://art/Push Animation 48x48.png" id="5_00tjw"]
 [ext_resource type="Texture2D" uid="uid://c28tqhdr4r8tx" path="res://art/Run Animation 48x48.png" id="6_nvl01"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhl08"]
+size = Vector2(40, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
 atlas = ExtResource("2_fhl08")
@@ -339,9 +342,17 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_4ntmi")
 
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("RectangleShape2D_fhl08")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(166, 86)
+position = Vector2(-4, -3)
 sprite_frames = SubResource("SpriteFrames_ie7r7")
 animation = &"jump"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-10, -1)

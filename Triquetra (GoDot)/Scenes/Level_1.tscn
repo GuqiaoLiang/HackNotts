@@ -1,11 +1,10 @@
-[gd_scene load_steps=2 format=4 uid="uid://do0sjlmh24ve1"]
+[gd_scene load_steps=3 format=4 uid="uid://ba6kvijhlxspf"]
 
 [ext_resource type="TileSet" uid="uid://4sb04ju368vy" path="res://Textures/Mapped.tres" id="1_y0ncb"]
+[ext_resource type="PackedScene" uid="uid://bwokn1lb5fmn4" path="res://Player/player.tscn" id="2_i63mn"]
 
 [node name="Example" type="Node2D"]
 metadata/_edit_vertical_guides_ = [-253.0]
-
-[node name="ghost" type="AnimatedSprite2D" parent="."]
 
 [node name="Modern" type="Node2D" parent="."]
 
@@ -47,3 +46,5 @@ rendering_quadrant_size = 32
 tile_map_data = PackedByteArray("AAACAP7/AgABAAEAAAAJAPn/AgABAAkAAAALAPn/AgAIAAoAAAALAPj/AgAIAAkAAAAKAPT/AgACAAwAAAA=")
 tile_set = ExtResource("1_y0ncb")
 rendering_quadrant_size = 32
+
+[node name="Player" parent="." instance=ExtResource("2_i63mn")]
