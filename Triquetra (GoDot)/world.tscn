@@ -1,7 +1,25 @@
 [gd_scene load_steps=2 format=3 uid="uid://elrqjy8fq5ri"]
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" path="res://Scenes/tile_map.tscn" id="1_tilemap"]
 
 [node name="world" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_tilemap")]
+=======
+[ext_resource type="PackedScene" uid="uid://bk0fvjkq0teg4" path="res://Player/player.tscn" id="1_f3sb7"]
+
+[node name="world" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_f3sb7")]
+position = Vector2(245, 429)
+>>>>>>> Stashed changes
+=======
+[ext_resource type="PackedScene" uid="uid://bk0fvjkq0teg4" path="res://Player/player.tscn" id="1_f3sb7"]
+
+[node name="world" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_f3sb7")]
+position = Vector2(245, 429)
+>>>>>>> Stashed changes
