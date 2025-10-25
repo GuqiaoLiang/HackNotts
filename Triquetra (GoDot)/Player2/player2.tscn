@@ -474,3 +474,6 @@ animation = &"slash_front"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(37, 27)
 shape = SubResource("CircleShape2D_ry4yc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(37, 27)
