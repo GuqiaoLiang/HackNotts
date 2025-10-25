@@ -22,7 +22,7 @@ offset_left = 600.0
 offset_top = 550.0
 offset_right = 700.0
 offset_bottom = 600.0
-scale = Vector2(2, 1.5)
+scale = Vector2(1.5, 1)
 text = "Next
 "
 text_overrun_behavior = 4
@@ -30,10 +30,10 @@ text_overrun_behavior = 4
 [node name="Label" type="Label" parent="TextureRect"]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 0
-offset_left = 550.0
-offset_top = 240.0
-offset_right = 850.0
-offset_bottom = 549.0
+offset_left = 460.0
+offset_top = 160.0
+offset_right = 980.0
+offset_bottom = 469.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "On this haunted Halloween night, the ancient Triquetra symbol awakens, glowing with a mysterious power. A portal through time shimmers before you, offering a journey across past, present, and future. The world teeters on the edge of chaos, and only your courage and wits can uncover hidden treasures on the map and restore balance. Step forward, brave adventurer—time is fleeting, and destiny awaits."
 horizontal_alignment = 1
