@@ -361,4 +361,4 @@ sprite_frames = SubResource("SpriteFrames_ie7r7")
 animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-10, -1)
+position = Vector2(54, 38)

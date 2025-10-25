@@ -233,7 +233,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pv1al")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 7.0
 }, {
@@ -256,7 +256,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uexgx"]
-radius = 7.0
+radius = 12.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhyd0"]
 size = Vector2(26, 27)
@@ -268,16 +268,15 @@ script = ExtResource("1_rhyd0")
 position = Vector2(156.5, 95.5)
 scale = Vector2(1.09375, 1.15625)
 sprite_frames = SubResource("SpriteFrames_gq6xt")
-animation = &"run"
-frame_progress = 0.20848943
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(159, 102)
+position = Vector2(156, 99)
 shape = SubResource("CircleShape2D_uexgx")
 
 [node name="InteractionArea" type="Area2D" parent="."]
-position = Vector2(159, 102)
+position = Vector2(121, 101)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-3, -3.5)
+position = Vector2(35, -3)
 shape = SubResource("RectangleShape2D_rhyd0")

@@ -320,7 +320,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"slash_back",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -366,7 +366,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"slash_left",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -389,7 +389,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"slash_right",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -469,7 +469,7 @@ script = ExtResource("1_ry4yc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(38, 22)
 sprite_frames = SubResource("SpriteFrames_hikxi")
-animation = &"slash_front"
+animation = &"slash_back"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(37, 27)
