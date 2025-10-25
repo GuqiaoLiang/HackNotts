@@ -30,5 +30,4 @@ func update_progress(value: float):
 	progress_bar.value = value
 	if value >= 100:
 		await get_tree().create_timer(0.5).timeout
-		# 切换到主场景，例如：
-		# get_tree().change_scene_to_file("res://main_scene.tscn")
+		get_tree().change_scene_to_file("res://MainMenu/MainMenu.tscn")
