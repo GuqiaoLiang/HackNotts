@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://88jpksllnbgx"]
+
+[ext_resource type="Script" uid="uid://c6dihyk4sl0lh" path="res://StoryPopup/story_popup.gd" id="1_xiq6v"]
+[ext_resource type="Texture2D" uid="uid://bwgr678dq5rr2" path="res://Textures/Background/Y1HlQg.png" id="2_11otr"]
+
+[node name="StoryPopup" type="CanvasLayer"]
+script = ExtResource("1_xiq6v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(10, 10)
+offset_left = -40.0
+offset_top = -25.0
+offset_right = 1326.0
+offset_bottom = 743.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_11otr")
+
+[node name="Button" type="Button" parent="TextureRect"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
+offset_left = 600.0
+offset_top = 550.0
+offset_right = 700.0
+offset_bottom = 600.0
+scale = Vector2(2, 1.5)
+text = "Next
+"
+text_overrun_behavior = 4
+
+[node name="Label" type="Label" parent="TextureRect"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 550.0
+offset_top = 240.0
+offset_right = 850.0
+offset_bottom = 549.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "On this haunted Halloween night, the ancient Triquetra symbol awakens, glowing with a mysterious power. A portal through time shimmers before you, offering a journey across past, present, and future. The world teeters on the edge of chaos, and only your courage and wits can uncover hidden treasures on the map and restore balance. Step forward, brave adventurer—time is fleeting, and destiny awaits."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

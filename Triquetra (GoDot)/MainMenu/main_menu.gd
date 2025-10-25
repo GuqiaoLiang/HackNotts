@@ -41,4 +41,4 @@ func _on_anim_finished(anim_name):
 
 func _start_game():
 	# 改成你的游戏主场景路径，例如：res://Scenes/level1.tscn
-	get_tree().change_scene_to_file("res://Scenes/level1.tscn")
+	get_tree().change_scene_to_file("res://StoryPopup/StoryPopup.tscn")
