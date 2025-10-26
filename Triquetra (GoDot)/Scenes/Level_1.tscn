@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=4 uid="uid://do0sjlmh24ve1"]
+[gd_scene load_steps=6 format=4 uid="uid://do0sjlmh24ve1"]
 
+[ext_resource type="Script" uid="uid://dfma44d4n8ifd" path="res://Scenes/level_1.gd" id="1_nh7xm"]
 [ext_resource type="TileSet" uid="uid://4sb04ju368vy" path="res://Textures/Mapped.tres" id="1_y0ncb"]
 [ext_resource type="PackedScene" uid="uid://bwokn1lb5fmn4" path="res://Player/player.tscn" id="2_i63mn"]
 [ext_resource type="PackedScene" uid="uid://pbr3abg3dmlj" path="res://Ghost/ghost.tscn" id="3_vnunq"]
+[ext_resource type="PackedScene" uid="uid://lpc7qc7njvib" path="res://Scenes/fade.tscn" id="5_j0k67"]
 
 [node name="world" type="Node2D"]
+script = ExtResource("1_nh7xm")
 metadata/_edit_vertical_guides_ = [-253.0]
 
 [node name="Modern" type="Node2D" parent="."]
@@ -30,3 +33,5 @@ position = Vector2(67, -89)
 
 [node name="Ghost" parent="." instance=ExtResource("3_vnunq")]
 position = Vector2(112, -311)
+
+[node name="Fade_transition" parent="." instance=ExtResource("5_j0k67")]
