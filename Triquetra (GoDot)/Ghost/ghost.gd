@@ -26,7 +26,7 @@ func _ready() -> void:
 	jump_timer.timeout.connect(_on_jump_timer_timeout)
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if not is_alive:
 		return
 
@@ -54,7 +54,7 @@ func _on_body_entered(body: Node) -> void:
 		_on_player_interacted(body)
 
 
-func _on_player_interacted(player: Node) -> void:
+func _on_player_interacted(_player: Node) -> void:
 	# Trigger excitement animation (jump sequence)
 	if state != "jumping" and is_alive:
 		state = "jumping"

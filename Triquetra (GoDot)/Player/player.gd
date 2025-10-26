@@ -3,6 +3,7 @@ extends CharacterBody2D
 const SPEED = 100.0
 @onready var anim = $AnimatedSprite2D
 @onready var interaction_area = $InteractionArea
+@onready var dialogic_character := preload("res://Player/Player.dch")
 
 var state = "idle"
 var nearby_object = null  # stores what we can interact with
@@ -19,7 +20,7 @@ func _on_body_exited(body):
 	if body == nearby_object:
 		nearby_object = null
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = input_vector * SPEED
 

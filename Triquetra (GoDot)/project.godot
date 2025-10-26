@@ -23,17 +23,19 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Jax": "res://Jax.dch",
+"Player": "res://Player/Player.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "timeline": "res://timeline.dtl"
 }
 layout/style_directory={
+"": "res://textbubble.tres",
 "textbubble": "res://textbubble.tres"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://textbubble.tres"]
-layout/default_style="res://textbubblr.tres"
+layout/default_style="res://textbubble.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
