@@ -65,10 +65,11 @@ where puzzles, ghosts, and fate intertwine.
 
 - **Engine:** Godot 4.x  
 - **Design & Story:** Guqiao Liang, Jessica Mak, Abdullah Alshamam
-- **Art & Assets:** 
-[Pixel Art Top Down]([url](https://cainos.itch.io/pixel-art-top-down-basic))
-[The Guy]([url](https://escape-pixel.itch.io/animated-character-template-asset-pack-2d-pixel-art))
-[Satyr Character]([url](https://lucky-loops.itch.io/character-satyr))
-[Medieval UI]([url](https://toffeecraft.itch.io/ui-user-interface-pack-medieval))
-- **Font:** Caveat.ttf (Google Fonts)  
+## Used Art & Assets:
+- [Pixel Art Top Down](https://cainos.itch.io/pixel-art-top-down-basic)  
+- [The Guy](https://escape-pixel.itch.io/animated-character-template-asset-pack-2d-pixel-art)  
+- [Satyr Character](https://lucky-loops.itch.io/character-satyr)  
+- [Medieval UI](https://toffeecraft.itch.io/ui-user-interface-pack-medieval)
+
+**Font:** Caveat.ttf (Google Fonts)  
 
