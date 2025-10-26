@@ -16,6 +16,8 @@ var reached_player: bool = false
 
 func _ready() -> void:
 	add_to_group("NPC")
+	print("鬼魂起始位置 - 本地坐标: ", position)
+	print("鬼魂起始位置 - 全局坐标: ", global_position)
 
 	bubble.visible = false
 	bubble_label.text = ""
