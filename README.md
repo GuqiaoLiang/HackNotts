@@ -109,7 +109,7 @@ If you want to build a standalone executable:
 ## ✨ Credits
 
 - **Engine:** Godot 4.x  
-- **Design & Story:** [Your Name or Team]  
+- **Design & Story:** Guqiao Liang, Jessicat, Abdullah Alshamam
 - **Art & Assets:** Custom / Open License  
 - **Font:** Caveat.ttf (Google Fonts)  
 
