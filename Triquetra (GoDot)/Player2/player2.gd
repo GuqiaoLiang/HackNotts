@@ -83,5 +83,8 @@ func _position_attack_area() -> void:
 
 # --- When attack hits an enemy ---
 func _on_attack_area_body_entered(body: Node) -> void:
-	if body.is_in_group("NPC") and body.has_method("die"):
-		body.die()
+	if body.is_in_group("NPC"):
+		# Only damage when actually slashing
+		if state == "slash" and anim.is_playing():
+			if body.has_method("die"):
+				body.die()

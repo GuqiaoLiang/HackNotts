@@ -473,7 +473,7 @@ script = ExtResource("1_ry4yc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -19)
 sprite_frames = SubResource("SpriteFrames_hikxi")
-animation = &"slash_back"
+animation = &"slash_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -14)

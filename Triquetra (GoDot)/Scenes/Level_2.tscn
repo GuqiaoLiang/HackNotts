@@ -49,4 +49,4 @@ rendering_quadrant_size = 32
 position = Vector2(-99, -276)
 
 [node name="Player2" parent="Medival" instance=ExtResource("2_vgr4u")]
-position = Vector2(83, 50)
+position = Vector2(83, 49)
