@@ -280,3 +280,5 @@ position = Vector2(121, 101)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(35, -3)
 shape = SubResource("RectangleShape2D_rhyd0")
+
+[node name="JumpTimer" type="Timer" parent="."]

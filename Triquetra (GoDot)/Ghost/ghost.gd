@@ -1,23 +1,29 @@
 extends CharacterBody2D
 
 # === CONFIGURATION ===
-const SPEED = 0.0  # Ghost doesn't move freely in this version
-const MAX_JUMPS = 3  # How many times it jumps when excited
+const SPEED = 0.0              # Ghost doesn't move freely in this version
+const MAX_JUMPS = 3            # How many times it jumps when excited
+const JUMP_DELAY = 0.4         # Delay between jumps (seconds)
 
 # === NODES ===
 @onready var anim = $AnimatedSprite2D
 @onready var interaction_area = $InteractionArea
+@onready var jump_timer = $JumpTimer   # Timer node added in the scene
 
 # === STATE ===
-var state: String = "idle"  # idle, jumping, hit, death
+var state: String = "idle"     # idle, jumping, hit, death
 var is_alive: bool = true
 var jump_count: int = 0
 
 
 func _ready() -> void:
 	add_to_group("NPC")
-	# Detect when player interacts or enters ghost’s area
+
+	# Connect the InteractionArea signal
 	interaction_area.body_entered.connect(_on_body_entered)
+
+	# Connect the Timer signal (so we know when to do the next jump)
+	jump_timer.timeout.connect(_on_jump_timer_timeout)
 
 
 func _physics_process(delta: float) -> void:
@@ -29,13 +35,7 @@ func _physics_process(delta: float) -> void:
 			anim.play("idle")
 
 		"jumping":
-			# When the current jump animation finishes...
-			if not anim.is_playing():
-				jump_count += 1
-				if jump_count < MAX_JUMPS:
-					anim.play("jump")  # Jump again
-				else:
-					state = "idle"  # Finished excitement jumps
+			# The jumping logic is handled by the timer callback
 			return
 
 		"hit":
@@ -60,8 +60,24 @@ func _on_player_interacted(player: Node) -> void:
 		state = "jumping"
 		jump_count = 0
 		anim.play("jump")
-		# Optional: You could emit a signal here to start a "battle intro"
-		# emit_signal("battle_started", self, player)
+		jump_timer.start(JUMP_DELAY)  # start delay before next jump
+
+
+# === TIMER CALLBACK ===
+func _on_jump_timer_timeout() -> void:
+	if state != "jumping" or not is_alive:
+		return
+
+	# If animation has finished and jumps remain
+	if not anim.is_playing():
+		jump_count += 1
+
+		if jump_count < MAX_JUMPS:
+			anim.play("jump")
+			jump_timer.start(JUMP_DELAY)  # delay next jump
+		else:
+			state = "idle"
+			anim.play("idle")
 
 
 # === REACTION STATES (for battle system later) ===
