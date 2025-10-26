@@ -45,8 +45,43 @@ tile_map_data = PackedByteArray("AAAJAPn/AgABAAkAAAALAPn/AgAIAAoAAAALAPj/AgAIAAk
 tile_set = ExtResource("1_glw66")
 rendering_quadrant_size = 32
 
-[node name="Ghost" parent="Medival" instance=ExtResource("3_apq5t")]
+[node name="ghosts" type="Node2D" parent="Medival"]
 position = Vector2(-99, -276)
+
+[node name="Ghost10" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(65, -338)
+scale = Vector2(-1, 1)
+
+[node name="Ghost9" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(-258, 131)
+
+[node name="Ghost8" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(726, -196)
+scale = Vector2(-1, 1)
+
+[node name="Ghost7" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(-95, -280)
+scale = Vector2(-1, 1)
+
+[node name="Ghost6" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(-111, -177)
+
+[node name="Ghost5" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(74, -138)
+scale = Vector2(-1, 1)
+
+[node name="Ghost4" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(105, -231)
+
+[node name="Ghost3" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(736, 16)
+scale = Vector2(1e-05, 1e-05)
+
+[node name="Ghost2" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(344, 43)
+
+[node name="Ghost" parent="Medival/ghosts" instance=ExtResource("3_apq5t")]
+position = Vector2(140, 59)
 
 [node name="Player2" parent="Medival" instance=ExtResource("2_vgr4u")]
 position = Vector2(83, 49)
