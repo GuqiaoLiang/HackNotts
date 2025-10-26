@@ -13,8 +13,7 @@ where puzzles, ghosts, and fate intertwine.
 
 1. Go to the official website:  
    👉 [https://godotengine.org/download](https://godotengine.org/download)
-2. Download the latest **Godot 4.x (Stable)** version  
-   > Recommended: **Godot 4.3** or newer
+2. Download the latest **Godot 4.5 (Stable)** version  
 3. Extract and open the executable directly — no installation required:
    - **Windows:** `Godot_v4.x-stable_win64.exe`
    - **macOS:** drag to Applications
@@ -53,7 +52,7 @@ where puzzles, ghosts, and fate intertwine.
 
 ---
 
-## 🚀 4. Run the Game
+## 🚀 3. Run the Game
 
 - Press **F5** or click ▶️ **Play the Project**
 - You should see the **Starting Screen**
@@ -62,58 +61,14 @@ where puzzles, ghosts, and fate intertwine.
 
 ---
 
-## 🔊 5. Optional Tweaks
-
-### 🎧 Adjust BGM Volume
-1. Open the scene with your background music node (usually `AudioStreamPlayer`)
-2. In the **Inspector**, change:
-   ```
-   volume_db = -10
-   ```
-
-### 🖥️ Adjust Resolution
-1. Go to **Project → Project Settings → Display → Window**
-2. Change:
-   ```
-   Size → Width: 1280
-   Size → Height: 720
-   ```
-
----
-
-## 📦 6. Export the Game (Optional)
-
-If you want to build a standalone executable:
-
-1. Go to **Project → Export...**
-2. Click **Add Preset** → choose your platform
-3. Select an output path, for example:
-   ```
-   build/Timebound.exe
-   ```
-4. Click **Export Project**
-
----
-
-## ⚠️ 7. Troubleshooting
-
-| Issue | Possible Cause | Fix |
-|-------|----------------|------|
-| 🕳️ Black Screen | Main scene not set | Check Project Settings → main scene |
-| 🧩 Scene Missing | Wrong scene path | Confirm `res://StartingScreen/StartingScreen.tscn` exists |
-| 🔇 No Music | Missing BGM file | Check `/Audio/` folder |
-| ⛔ Player Not Moving | Input not mapped | Project Settings → Input Map (add ui_left/right/up/down) |
-
----
-
 ## ✨ Credits
 
 - **Engine:** Godot 4.x  
-- **Design & Story:** Guqiao Liang, Jessicat, Abdullah Alshamam
-- **Art & Assets:** Custom / Open License  
+- **Design & Story:** Guqiao Liang, Jessica Mak, Abdullah Alshamam
+- **Art & Assets:** 
+[Pixel Art Top Down]([url](https://cainos.itch.io/pixel-art-top-down-basic))
+[The Guy]([url](https://escape-pixel.itch.io/animated-character-template-asset-pack-2d-pixel-art))
+[Satyr Character]([url](https://lucky-loops.itch.io/character-satyr))
+[Medieval UI]([url](https://toffeecraft.itch.io/ui-user-interface-pack-medieval))
 - **Font:** Caveat.ttf (Google Fonts)  
-
----
-
-> 💡 *“Time bends, memories fade — but some doors never close.”*
 
