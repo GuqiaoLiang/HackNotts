@@ -4,17 +4,25 @@ extends CharacterBody2D
 const MOVE_SPEED: float = 50.0
 const STOP_DISTANCE: float = 50.0  # 靠近后停止的距离
 
+@onready var interaction_area = $InteractionArea
+@onready var jump_timer = $JumpTimer
+
 # === REFERENCES ===
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var bubble: Panel = $Bubble
 @onready var bubble_label: Label = $Bubble/Label
 var player: Node2D
 
+var state: String = "idle"     # idle, jumping, hit, death
+var is_alive: bool = true
+var jump_count: int = 0
+
 # === STATE ===
 var is_talking: bool = false
 var reached_player: bool = false
 
 func _ready() -> void:
+	
 	add_to_group("NPC")
 	print("鬼魂起始位置 - 本地坐标: ", position)
 	print("鬼魂起始位置 - 全局坐标: ", global_position)
@@ -43,9 +51,26 @@ func _physics_process(_delta: float) -> void:
 	if is_talking:
 		return
 		
+	if not is_alive:
+		match state:
+			"idle":
+				anim.play("idle")
+
+			"jumping":
+				return
+
+			"hit":
+				if not anim.is_playing():
+					state = "idle"
+				return
+
+			"death":
+				return  # stop updates on death
 	if player == null:
 		_find_player()
 		return
+		
+
 
 	var dir: Vector2 = player.global_position - global_position
 	var distance: float = dir.length()
@@ -71,6 +96,57 @@ func _physics_process(_delta: float) -> void:
 		if not reached_player:
 			reached_player = true
 			_start_dialogue()
+
+# === REACTION STATES ===
+func hit() -> void:
+	if not is_alive:
+		return
+	state = "hit"
+	anim.play("hit")
+
+	# Flash red briefly
+	anim.modulate = Color(1, 0.3, 0.3)
+	await get_tree().create_timer(0.2).timeout
+	anim.modulate = Color(1, 1, 1)
+
+func die() -> void:
+	if not is_alive:
+		return
+	is_alive = false
+	state = "death"
+
+	# Stop all actions
+	jump_timer.stop()
+	interaction_area.monitoring = false
+
+	# --- Disable all collisions (ghost no longer interacts) ---
+	for child in get_children():
+		if child is CollisionShape2D:
+			child.disabled = true
+		elif child is CollisionPolygon2D:
+			child.disabled = true
+		elif child is Area2D:
+			child.monitoring = false
+			child.monitorable = false
+	# Also stop physics
+	set_physics_process(false)
+
+	# --- Play death animation ---
+	if anim.sprite_frames.has_animation("death"):
+		anim.play("death")
+	else:
+		anim.visible = false  # fallback, vanish instantly
+
+	# --- Optional fade-out after animation ---
+	if anim.sprite_frames.has_animation("death"):
+		await anim.animation_finished
+
+	var tween := create_tween()
+	tween.tween_property(anim, "modulate:a", 0.0, 1.0)
+	await tween.finished
+
+	queue_free()
+
 
 # === DIALOGUE LOGIC ===
 func _start_dialogue() -> void:
