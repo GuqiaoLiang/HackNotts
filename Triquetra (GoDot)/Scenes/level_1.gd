@@ -16,7 +16,7 @@ func _ready() -> void:
 	await get_tree().process_frame
 
 	# --- Register Jax as a character for the TextBubble ---
-	var jax_char: DialogicCharacter = preload("res://dialogic/characters/Jax.dch")
+	var jax_char: DialogicCharacter = preload("res://Jax.dch")
 
 	# Find the textbubble layer (so we can attach the character bubble)
 	var bubble_layer := Dialogic.Styles.get_first_node_in_layout("TextBubble")
