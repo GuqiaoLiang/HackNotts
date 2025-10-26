@@ -34,6 +34,7 @@ tile_set = ExtResource("1_glw66")
 rendering_quadrant_size = 32
 
 [node name="Props" type="TileMapLayer" parent="Medival"]
+position = Vector2(2, -2)
 tile_map_data = PackedByteArray("AAACAPn/AQADAAUAAAAAAPv/AQAMAAMAAAAAAPj/AwAJAAEAAAAEAPD/AQAJAAIAAAAEAPj/AQAOAAMAAAABAAIAAQAEAA8AAAD5////AQAJAAIAAAAGAPj/AQAJAAAAAAANAPL/AQANAAAAAAAOAPr/AQAHAAIAAAABAO//AQALAAUAAAAHAO//AQALAAUAAAAHAAAAAQAHAAUAAAA=")
 tile_set = ExtResource("1_glw66")
 rendering_quadrant_size = 32
