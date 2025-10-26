@@ -282,3 +282,13 @@ position = Vector2(35, -3)
 shape = SubResource("RectangleShape2D_rhyd0")
 
 [node name="JumpTimer" type="Timer" parent="."]
+
+[node name="Bubble" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Bubble"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 4
