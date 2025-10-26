@@ -86,6 +86,16 @@ region = Rect2(1080, 0, 120, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bpbo0"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bs0kc")
@@ -165,5 +175,4 @@ script = ExtResource("1_f8xjr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(168, 75)
 sprite_frames = SubResource("SpriteFrames_bpbo0")
-animation = &"run"
-frame_progress = 0.58141476
+animation = &"attack"
