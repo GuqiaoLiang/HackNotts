@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://4sb04ju368vy" path="res://Textures/Mapped.tres" id="1_y0ncb"]
 [ext_resource type="PackedScene" uid="uid://bwokn1lb5fmn4" path="res://Player/player.tscn" id="2_i63mn"]
 [ext_resource type="PackedScene" uid="uid://pbr3abg3dmlj" path="res://Ghost/ghost.tscn" id="3_vnunq"]
-[ext_resource type="PackedScene" uid="uid://lpc7qc7njvib" path="res://Scenes/fade.tscn" id="5_j0k67"]
+[ext_resource type="PackedScene" path="res://Scenes/fade.tscn" id="5_j0k67"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_nh7xm")
