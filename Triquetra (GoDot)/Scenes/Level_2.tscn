@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bpnwg7qubwx3g"]
+[gd_scene load_steps=7 format=4 uid="uid://bpnwg7qubwx3g"]
 
 [ext_resource type="TileSet" uid="uid://4sb04ju368vy" path="res://Textures/Mapped.tres" id="1_glw66"]
 [ext_resource type="Texture2D" uid="uid://b1d4xbfdwkxvw" path="res://Textures/Tilesets/background.png" id="1_ostk4"]
 [ext_resource type="PackedScene" uid="uid://p44glqqpcha" path="res://Player2/player2.tscn" id="2_vgr4u"]
+[ext_resource type="PackedScene" uid="uid://pbr3abg3dmlj" path="res://Ghost/ghost.tscn" id="3_apq5t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_apq5t"]
 texture = ExtResource("1_ostk4")
@@ -44,5 +45,8 @@ tile_map_data = PackedByteArray("AAAJAPn/AgABAAkAAAALAPn/AgAIAAoAAAALAPj/AgAIAAk
 tile_set = ExtResource("1_glw66")
 rendering_quadrant_size = 32
 
+[node name="Ghost" parent="Medival" instance=ExtResource("3_apq5t")]
+position = Vector2(-99, -276)
+
 [node name="Player2" parent="Medival" instance=ExtResource("2_vgr4u")]
-position = Vector2(1, 1)
+position = Vector2(83, 50)

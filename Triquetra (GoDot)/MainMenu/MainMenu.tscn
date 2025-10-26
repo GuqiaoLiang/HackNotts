@@ -1,12 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://xb4qnfig5724"]
+[gd_scene load_steps=4 format=3 uid="uid://cpvs0pirkmv8m"]
 
-[ext_resource type="Script" uid="uid://s16undvjm7ux" path="res://MainMenu/main_menu.gd" id="1_otibh"]
 [ext_resource type="Texture2D" uid="uid://d38iiwp1kbm14" path="res://Textures/Tilesets/Extra/TX Plant with Shadow.png" id="2_cruaa"]
-[ext_resource type="PackedScene" uid="uid://dmik5qrfje173" path="res://Ghost/ghost.tscn" id="3_b76km"]
+[ext_resource type="PackedScene" uid="uid://pbr3abg3dmlj" path="res://Ghost/ghost.tscn" id="3_b76km"]
+
+[sub_resource type="GDScript" id="GDScript_cruaa"]
+script/source = "extends Node2D
+
+@onready var btn_play = $menu_box/btn_play
+@onready var btn_quit = $menu_box/btn_quit
+@onready var bgm = $bgm
+@onready var anim = $anim
+
+@export var bgm_path := \"res://Songs/medieval.mp3\"
+
+func _ready():
+	# 背景音乐
+	var stream = load(bgm_path)
+	if stream:
+		bgm.stream = stream
+		bgm.volume_db = -6
+		bgm.autoplay = true
+		bgm.play()
+
+	# 连接按钮
+	btn_play.connect(\"pressed\", Callable(self, \"_on_play_pressed\"))
+	btn_quit.connect(\"pressed\", Callable(self, \"_on_quit_pressed\"))
+
+	## 播放入场动画（可选）
+	#if anim.has_animation(\"intro\"):
+		#anim.play(\"intro\")
+
+func _on_play_pressed():
+	# 播放点击动画
+	_start_game()
+
+func _on_quit_pressed():
+	get_tree().quit()
+
+func _on_anim_finished(anim_name):
+	if anim_name == \"fade_out\":
+		_start_game()
+
+func _start_game():
+	# 改成你的游戏主场景路径，例如：res://Scenes/level1.tscn
+	get_tree().change_scene_to_file(\"res://StoryPopup/StoryPopup.tscn\")
+"
 
 [node name="MainMenu" type="Node2D"]
 scale = Vector2(1.9, 0.99)
-script = ExtResource("1_otibh")
+script = SubResource("GDScript_cruaa")
 
 [node name="bg_color" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(100, 100)
