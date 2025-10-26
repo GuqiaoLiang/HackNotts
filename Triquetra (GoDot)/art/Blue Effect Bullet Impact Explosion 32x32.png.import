@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci2undyscvl7m"
-path="res://.godot/imported/quit_standard.png-1c3c080a237dd56ef05a69e0870c7fc4.ctex"
+uid="uid://c3isfm0j7n2ir"
+path="res://.godot/imported/Blue Effect Bullet Impact Explosion 32x32.png-92bf51908322af34cbdfacdb4b518ae2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Tilesets/UI/Buttons/quit_standard.png"
-dest_files=["res://.godot/imported/quit_standard.png-1c3c080a237dd56ef05a69e0870c7fc4.ctex"]
+source_file="res://art/Blue Effect Bullet Impact Explosion 32x32.png"
+dest_files=["res://.godot/imported/Blue Effect Bullet Impact Explosion 32x32.png-92bf51908322af34cbdfacdb4b518ae2.ctex"]
 
 [params]
 
