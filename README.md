@@ -1,11 +1,9 @@
 # 👻 Triquetra: The Halloween Mystery
 
-A mysterious Halloween night…  
 An ancient **Triquetra** symbol glowing faintly…  
-And a traveler lost between **time and reality**.
+And a traveler lost between **time and reality...**
 
-This Godot 4.x project brings you on a story-driven journey across timelines —  
-where puzzles, ghosts, and fate intertwine.
+Being drawn to medival times, can you return to the present?
 
 ---
 
