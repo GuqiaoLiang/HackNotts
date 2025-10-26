@@ -32,6 +32,7 @@ texture = ExtResource("3_n6bos")
 
 [node name="Medieval" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_4glkq")
+volume_db = -14.034
 autoplay = true
 parameters/looping = true
 

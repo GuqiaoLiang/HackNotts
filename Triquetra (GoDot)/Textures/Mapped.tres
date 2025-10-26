@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://4sb04ju368vy"]
+[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://4sb04ju368vy"]
 
 [ext_resource type="Texture2D" uid="uid://b0hmdbyndlet7" path="res://Textures/Tilesets/TX Tileset Grass.png" id="1_qf6fn"]
 [ext_resource type="Texture2D" uid="uid://g7p8whvioqv1" path="res://Textures/Tilesets/TX Props Dark.png" id="2_kx5wg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c21ykpmk4t36p" path="res://Textures/Tilesets/Modern/TX Tileset Grass.png" id="6_b6w1g"]
 [ext_resource type="Texture2D" uid="uid://2r1ashxmtb4y" path="res://Textures/Tilesets/Modern/TX Tileset Wall.png" id="7_kx5wg"]
 [ext_resource type="Texture2D" uid="uid://blptaee1k1gr6" path="res://Textures/Tilesets/Modern/TX Props.png" id="8_ej7r0"]
+[ext_resource type="Texture2D" uid="uid://b1d4xbfdwkxvw" path="res://Textures/Tilesets/background.png" id="9_ej7r0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_424s8"]
 texture = ExtResource("1_qf6fn")
@@ -650,6 +651,26 @@ texture_region_size = Vector2i(32, 32)
 14:3/size_in_atlas = Vector2i(1, 2)
 14:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3fcr7"]
+texture = ExtResource("9_ej7r0")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
 [resource]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
@@ -661,3 +682,4 @@ sources/4 = SubResource("TileSetAtlasSource_all5k")
 sources/5 = SubResource("TileSetAtlasSource_ej7r0")
 sources/6 = SubResource("TileSetAtlasSource_12q6e")
 sources/7 = SubResource("TileSetAtlasSource_g3pa8")
+sources/8 = SubResource("TileSetAtlasSource_3fcr7")
